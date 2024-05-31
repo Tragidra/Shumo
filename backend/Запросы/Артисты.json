@@ -1,0 +1,127 @@
+{
+    "artists": [
+        {
+            "accountId": 18378979,
+            "albumSize": 90,
+            "alias": [
+                "Silence Wang"
+            ],
+            "briefDesc": "",
+            "followed": false,
+            "id": 5538,
+            "img1v1Id": 109951168242038990,
+            "img1v1Id_str": "109951168242038988",
+            "img1v1Url": "http://p2.music.126.net/XGVlz2pWOvYjNTYNp9Jinw==/109951168242038988.jpg",
+            "musicSize": 590,
+            "name": "汪苏泷",
+            "picId": 109951168242041920,
+            "picId_str": "109951168242041913",
+            "picUrl": "http://p2.music.126.net/stcFdXbN2c21hzWqpDgTQA==/109951168242041913.jpg",
+            "topicPerson": 0,
+            "trans": ""
+        },
+        {
+            "albumSize": 67,
+            "alias": [
+                "JJ Lin",
+                "Wayne Lim"
+            ],
+            "briefDesc": "",
+            "followed": false,
+            "id": 3684,
+            "img1v1Id": 109951168529049970,
+            "img1v1Id_str": "109951168529049969",
+            "img1v1Url": "http://p2.music.126.net/r6W-zCnV-aduVn_PLZYuYg==/109951168529049969.jpg",
+            "musicSize": 586,
+            "name": "林俊杰",
+            "picId": 109951168529051970,
+            "picId_str": "109951168529051968",
+            "picUrl": "http://p2.music.126.net/78q0jUUJ0h08GxAs2G-tCA==/109951168529051968.jpg",
+            "topicPerson": 0,
+            "trans": ""
+        },
+        {
+            "albumSize": 130,
+            "alias": [
+                "Eason Chan"
+            ],
+            "briefDesc": "",
+            "followed": false,
+            "id": 2116,
+            "img1v1Id": 109951169014571700,
+            "img1v1Id_str": "109951169014571694",
+            "img1v1Url": "http://p2.music.126.net/ODuFZql3x08Q4AaW7y20Aw==/109951169014571694.jpg",
+            "musicSize": 1885,
+            "name": "陈奕迅",
+            "picId": 109951169014564420,
+            "picId_str": "109951169014564421",
+            "picUrl": "http://p2.music.126.net/1qr8a9G8pWEMoruLJaBv8A==/109951169014564421.jpg",
+            "topicPerson": 0,
+            "trans": ""
+        },
+        {
+            "accountId": 281382,
+            "albumSize": 55,
+            "alias": [
+                "G.E.M.",
+                "Gloria Tang"
+            ],
+            "briefDesc": "",
+            "followed": false,
+            "id": 7763,
+            "img1v1Id": 109951167771736530,
+            "img1v1Id_str": "109951167771736533",
+            "img1v1Url": "http://p2.music.126.net/oJorrgJ3IotZUAbZkBMuFw==/109951167771736533.jpg",
+            "musicSize": 397,
+            "name": "G.E.M.邓紫棋",
+            "picId": 109951167773880640,
+            "picId_str": "109951167773880633",
+            "picUrl": "http://p2.music.126.net/fq1O8ZRT5_FHzg_uLEtUQA==/109951167773880633.jpg",
+            "topicPerson": 0,
+            "trans": ""
+        },
+        {
+            "accountId": 97137413,
+            "albumSize": 23,
+            "alias": [
+                "Joker Xue",
+                "Jacky Xue"
+            ],
+            "briefDesc": "",
+            "followed": false,
+            "id": 5781,
+            "img1v1Id": 109951168719781600,
+            "img1v1Id_str": "109951168719781607",
+            "img1v1Url": "http://p2.music.126.net/jj_Ke8S0q8lpDtohy9seDw==/109951168719781607.jpg",
+            "musicSize": 272,
+            "name": "薛之谦",
+            "picId": 109951168719786020,
+            "picId_str": "109951168719786015",
+            "picUrl": "http://p2.music.126.net/XRdiK-vIvPo83d-EjUTdEQ==/109951168719786015.jpg",
+            "topicPerson": 0,
+            "trans": ""
+        },
+        {
+            "accountId": 37132109,
+            "albumSize": 56,
+            "alias": [
+                "Diamond Zhang"
+            ],
+            "briefDesc": "",
+            "followed": false,
+            "id": 1024308,
+            "img1v1Id": 109951167896188580,
+            "img1v1Id_str": "109951167896188575",
+            "img1v1Url": "http://p2.music.126.net/drd04rrH1peb1pyICCxKAg==/109951167896188575.jpg",
+            "musicSize": 369,
+            "name": "张碧晨",
+            "picId": 109951167896179360,
+            "picId_str": "109951167896179360",
+            "picUrl": "http://p2.music.126.net/ArbpVuafLfcdRAPDi4JTDA==/109951167896179360.jpg",
+            "topicPerson": 0,
+            "trans": ""
+        }
+    ],
+    "more": true,
+    "code": 200
+}
