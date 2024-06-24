@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Streaming</title>
+</head>
+<body>
+    <h1>Audio Streaming</h1>
+    <audio controls id="audioPlayer">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const audioUrl = 'ws://localhost:8000/audio_ws';
+        const socket = new WebSocket(audioUrl);
+
+        let receivedData = [];
+
+        socket.binaryType = 'arraybuffer';
+
+        socket.onmessage = (event) => {
+            const chunk = new Uint8Array(event.data);
+            receivedData.push(chunk);
+        };
+
+        socket.onclose = () => {
+            const blob = new Blob(receivedData, { type: 'audio/mpeg' });
+            const url = URL.createObjectURL(blob);
+            audioPlayer.src = url;
+            audioPlayer.play();
+        };
+    </script>
+</body>
+</html>
