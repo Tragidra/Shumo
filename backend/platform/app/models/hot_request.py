@@ -9,12 +9,13 @@ class Hot_request(Base):
 
     searchWord = mapped_column(String, index=True)
     score = mapped_column(Integer, index=True)
-    content = mapped_column(String, index=True) #Доделать
+    content = mapped_column(String, index=True)  #Непонятно, что это, но должно быть пустым
     source = mapped_column(Integer, index=True)
     iconType = mapped_column(String, index=True)
     iconUrl = mapped_column(String, index=True)
     url = mapped_column(String, index=True)
     alg = mapped_column(String, index=True)
+
 
 @declared_attr
 def tablename(cls) -> str:

@@ -4,7 +4,9 @@ from sqlalchemy import Column, DateTime, Integer, func, String, Boolean, Foreign
 from sqlalchemy.ext.declarative import as_declarative, declared_attr
 from sqlalchemy.orm import relationship, mapped_column, Mapped
 
+from backend.platform.app.models.album import Albums
 from backend.platform.app.models.base_class import Base
+from backend.platform.app.models.songs import Songs, association_table_artists_alias_songs
 
 
 class Artists_details(Base):
@@ -18,15 +20,16 @@ class Artists_details(Base):
     img1v1Id_str: Mapped[str] = mapped_column(String, index=True)
     img1v1Url: Mapped[str] = mapped_column(String, index=True)
     musicSize: Mapped[int] = mapped_column(Integer, index=True)
+    albumSize: Mapped[int] = mapped_column(Integer, index=True)
     picid_str: Mapped[str] = mapped_column(String, index=True)
     picUrl: Mapped[str] = mapped_column(String, index=True)
     topicPerson: Mapped[int] = mapped_column(Integer, index=True)
     trans: Mapped[str] = mapped_column(String, index=True)
     transNames: Mapped[str] = mapped_column(String, index=True)
-    alias_id: Mapped[int] = mapped_column(ForeignKey('artists_details_alias.id', ondelete="SET NULL"),
-                                          nullable=False)
 
-    alias: Mapped[List["Artists_alias"]] = relationship(back_populates="artists_details", cascade="save-update")
+    alias: Mapped["Artists_alias"] = relationship(back_populates="artists_details")
+    albums: Mapped["Albums"] = relationship(back_populates="artists_details")
+    artists_for_search: Mapped["Artists_for_search"] = relationship(back_populates="artists_details")
 
 
 class Artists_alias(Base):
@@ -38,8 +41,9 @@ class Artists_alias(Base):
                                                     nullable=False)
     artists_outsides_id: Mapped[int] = mapped_column(ForeignKey('artists_outsides.id', ondelete='CASCADE'),
                                                      nullable=False)
-    artists_details: Mapped[List["Artists_details"]] = relationship(back_populates="alias")
-    artists_outsides: Mapped[List["Artists_outsides"]] = relationship(back_populates="alias")
+    artists_details: Mapped["Artists_details"] = relationship(back_populates="alias")
+    artists_outsides: Mapped["Artists_outsides"] = relationship(back_populates="alias")
+    songs: Mapped[List["Songs"]] = relationship(secondary=association_table_artists_alias_songs, back_populates="alias")
 
 
 class Artists_for_search(Base):
@@ -49,10 +53,8 @@ class Artists_for_search(Base):
     accountId: Mapped[int] = mapped_column(Integer, index=True)
     albumSize: Mapped[int] = mapped_column(Integer, index=True)
 
-    artists_details: Mapped[List["Artists_details"]] = relationship(back_populates="artists_details",
-                                                                    cascade="save-update")
-    artists_outsides: Mapped[List["Artists_outsides"]] = relationship(back_populates="artists_outsides",
-                                                                      cascade="save-update")
+    artists_details: Mapped["Artists_details"] = relationship(back_populates="artists_for_search")
+    artists_outsides: Mapped["Artists_outsides"] = relationship(back_populates="artists_for_search")
 
 
 @property
@@ -79,6 +81,5 @@ class Artists_outsides(Base):
     topicPerson = mapped_column(Integer, index=True)
     trans = mapped_column(String, index=True)
 
-    artists_alias_id: Mapped[int] = mapped_column(ForeignKey('artists_alias.id', ondelete="SET NULL"),
-                                                  nullable=False)
-    alias: Mapped[List["Artists_alias"]] = relationship(back_populates="artists_outsides", cascade="save-update")
+    alias: Mapped["Artists_alias"] = relationship(back_populates="artists_outsides")
+    artists_for_search: Mapped["Artists_for_search"] = relationship(back_populates="artists_outsides")

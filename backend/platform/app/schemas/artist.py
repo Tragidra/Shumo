@@ -30,6 +30,7 @@ class Artists_DetailsBase(BaseModel):
     img1v1Id_str: str
     img1v1Url: str
     musicSize: int
+    albumSize: int
     picid_str: str
     picUrl: str
     topicPerson: int
@@ -61,6 +62,7 @@ class Artists_DetailsUpdate(BaseModel):
     img1v1Id_str: Optional[str]
     img1v1Url: Optional[str]
     musicSize: Optional[int]
+    albumSize: Optional[int]
     picid_str: Optional[str]
     picUrl: Optional[str]
     topicPerson: Optional[int]
